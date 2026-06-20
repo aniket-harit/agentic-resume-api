@@ -1,0 +1,18 @@
+# Security
+.env
+.env.*
+
+# Python Cache & Compiled Files
+__pycache__/
+*.py[cod]
+
+# Virtual Environments
+.myenv/
+
+# Temporary Application Files
+temp_*.pdf
+
+# Editor & IDE Artifacts
+map
+.vscode/
+

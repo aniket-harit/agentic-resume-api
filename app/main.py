@@ -31,3 +31,10 @@ def read_root():
         with open(template_path, "r", encoding="utf-8") as f:
             return HTMLResponse(content=f.read())
     return HTMLResponse(content="<h1>Interactive UI Template not found!</h1>", status_code=404)
+
+
+@app.get("/health", response_class = HTMLResponse)
+def health_check():
+    return HTMLResponse(content = """
+    <h1>Health: Healthy</h1>
+    """)

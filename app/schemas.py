@@ -8,3 +8,14 @@ class QueryResponse(BaseModel):
 
 class UploadResponse(BaseModel):
     message: str = Field(..., description = "Message about status  of chunking and embedding process.")
+
+class ChatRequest(BaseModel):
+    message: str
+    model_config = {
+        "json_schema_extra":{
+            "example": {
+                "message": "Hello, I am looking for a software engineer with experience in Python and machine learning."
+                
+            }
+        }
+    }

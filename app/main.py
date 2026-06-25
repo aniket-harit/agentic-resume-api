@@ -18,8 +18,8 @@ app.add_middleware(
 )
 
 # Include routers
-app.include_router(document.router, tags=["Document"])
-app.include_router(chat.router, tags=["Chat"])
+app.include_router(document.router, prefix="/api/v1", tags=["Document"])
+app.include_router(chat.router, prefix="/api/v1", tags=["Chat"])
 
 import os
 from fastapi.responses import HTMLResponse
